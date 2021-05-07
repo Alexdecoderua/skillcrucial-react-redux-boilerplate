@@ -48,9 +48,9 @@ const RootComponent = (props) => {
       <RouterSelector history={history} location={props.location} context={props.context}>
         <Startup>
           <Switch>
-            <Route exact path="/:user" component={Home} />
-            <Route exact path="/:user/:repository" component={Home} />
-            <Route exact path="/*" component={Home} />
+            <Route exact path="/:user" component={() => <Home />} />
+            <Route exact path="/:user/:repository" component={() => <Home />} />
+            <Route exact path="/*" component={() => <Home />} />
             <PrivateRoute exact path="/hidden-route" component={() => <DummyView />} />
             <OnlyAnonymousRoute exact path="/anonymous-route" component={DummyView} />
             <Route component={NotFound} />

@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 
 
 const Readme = (props) => {
-  return <ReactMarkdown source={props.readme}/>
+  return <ReactMarkdown>{props.readme}</ReactMarkdown>
 }
 
 Readme.propTypes = {}
